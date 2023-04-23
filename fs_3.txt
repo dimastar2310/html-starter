@@ -1,0 +1,158 @@
+
+01 - The Star Drawer
+//https://codepen.io/dimastar2310/pen/QWZdovN?editors=1011
+function drawStars(n){
+  var stars =  '';
+  for(let i=0;i<n;i++){
+    stars+='*';
+  
+}
+ console.log(stars);
+}
+
+drawStars(5)  // should print: *****
+drawStars(3)  // should print: ***
+drawStars(7)  // should print: *******
+
+
+
+
+Looping  a triangle
+//https://codepen.io/dimastar2310/pen/rNqjRGG?editors=1011
+
+function Triangle(n){
+  var res = '';
+  var glob_res = '';
+  for(var i =0;i<=n;i++){
+    for (var j = 1;j<=i;j++){
+      res+='#';
+  }
+    glob_res+=res + '\n';
+    res = '';
+  
+}
+  return glob_res;
+}
+
+var res = Triangle(5);
+
+console.log(res);
+
+03 - Multiplication Tables
+//https://codepen.io/dimastar2310/pen/qBJRvKJ?editors=1011
+var multiplier = 9;
+for(var i =0;i<=10;i++){
+  var result = multiplier * i;
+  console.log(multiplier + ' * ' + i + ' = ' + result);
+  
+}
+
+for(var a = 1;a<=10;a++){
+  for(var b = 1;b<=10;b++){
+    var result = a * b;
+    
+    console.log(a + ' * ' + b + ' = '+ result);
+      
+    }
+}
+
+
+
+04 - The Letter Counter
+//https://codepen.io/dimastar2310/pen/LYgxagM?editors=1111
+
+function countLetter(sentence,char){
+  var caunt = 0;
+  for(var i = 0;i<sentence.length;i++){
+    if(sentence[i]===char){
+      caunt+=1;
+    }
+}
+
+console.log(caunt);
+}
+
+countLetter("Hello", "l"); // returns 2
+countLetter("Hello world", "o") ;// returns 2
+countLetter("Javascript class", "a"); // returns 3
+
+05 - The Grade Assigner
+//https://codepen.io/dimastar2310/pen/gOBgVLw?editors=1011
+function assignGrade(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+
+for(let i = 60;i<=100;i++){
+  console.log("for the grade = "+i+"the value is = "+assignGrade(i));
+}
+06-FizzBuzz
+
+function FizzBuzz(){
+  for(var i =1;i<100;i++){
+    if(i%5 === 0 && i%3===0){
+      console.log("FizzBuzz");
+    }
+    else if(i%3===0){
+      console.log("Fizz");
+    }
+    else if(i%5==0){
+      console.log("Buzz");
+    }
+    else{
+      console.log(i);
+    }
+  }
+}
+
+
+FizzBuzz();
+
+
+07 - Chessboard
+//https://codepen.io/dimastar2310/pen/LYgxwzY?editors=1011
+function chessBoard(letter) {
+  //even row => putting on odd the char #
+  //odd row =>putting on even the char #
+  var helpString = "";
+  var resString = "";
+  var gridSize = 8;
+  for (var i = 0; i < gridSize; i++) {
+    for (var j = 0; j < gridSize; j++) {
+      if (i % 2 === 0) {
+        // even row
+        if (j % 2 === 0) {
+          helpString += letter;
+        } else {
+          helpString += " ";
+        }
+      } else {
+        // odd row
+        if (j % 2 === 0) {
+          helpString += " ";
+        } else {
+          helpString += letter;
+        }
+      }
+    }
+    resString += helpString + "\n";
+    helpString = "";
+  }
+  console.log(resString);
+}
+
+chessBoard("#");
+
+
+
+
+
